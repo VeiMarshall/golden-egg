@@ -1,14 +1,35 @@
 /* fonts */
 $kurale: 'Kurale', serif;
-$openSans: 'Open Sans', sans-serif;
+$openSans: 'Open Sans', sans-s erif;
 
-*,
-*::before,
-*::after {
-   box-sizing: border-box;
+$white: #fff;
+$yellow: #E8C300;
+$black: #000000;
+$text: 18px;
+
+
+$wrap: 1470px;
+$container: 1200px;
+$mc: 0 auto;
+
+@mixin flex($jc,$ai) {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: $jc;
+   align-items: $ai;
 }
-
 body {
+   background: $white;
    font-family: $openSans;
-   background: black;
-}   
+   color: $black;
+   font-size: $text;
+}
+.wrapper {
+   max-width: $wrap;
+   margin: $mc;
+   padding: 0 15px;
+}
+.container {
+   max-width: $container;
+   margin: $mc;
+} 
